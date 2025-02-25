@@ -1,23 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web 3D</title>
+    <title>Portafolis Llibreries 3D</title>
     <style>
-        a {
-            display: block; /* Fa que cada enllaç ocupi tota la línia */
-            margin-bottom: 5px; /* Espai entre enllaços (opcional) */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #74c7e6;
+        }
+
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .info {
+            padding: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .info a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #074689;
+            display: inline-block;
+            margin-top: 15px;
+            text-align: center;
+            padding: 10px 20px;
+            border: 2px solid #074689;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .info a:hover {
+            background-color: #074689;
+            color: white;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding: 20px;
+            margin: 15px;
+            width: 280px;
+            align-items: center;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .box img:hover {
+            opacity: 0.8;
+        }
+
+        .about {
+            padding: 40px 20px;
+            background: #eee;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .about img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 5px solid #074689;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .about button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #074689;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .about button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 90%;
+            }
+
+            .about {
+                padding: 30px 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>3D WEBSITES</h1>
-    <h2>Kilian de los Santos</h2>
-
-
-    <a href="ex1/ex1.html">Exercici 1</a>
-    <a href="ex2/ex2.html">Exercici 2</a>
-    <a href="ex3/ex3.html">Exercici 3</a>
+    <header>
+        <nav>
+            <a href="#introduccio">Introducció</a>
+            <a href="#exercicis">Exercicis</a>
+            <a href="#sobre-mi">Sobre Mi</a>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="images/47.jpg" alt="Imatge Principal" class="main-image">
+        <div class="info" id="introduccio">
+            <h2>PORTAFOLIS LLIBRERIES 3D</h2>
+            <p>Les llibreries 3D en JavaScript han revolucionat la creació d'entorns virtuals i experiències immersives a la web.
+                A-Frame i MindAR són dues de les més destacades, cadascuna amb funcionalitats específiques per a diferents tipus de projectes.
+            </p>
+            <p>Gràcies a aquestes eines, els desenvolupadors poden dissenyar des d'experiències interactives senzilles 
+            fins a aplicacions immersives avançades que combinen realitat virtual, realitat augmentada i interacció 3D.
+            </p>
+            <p>Aquest portafolis explora aquestes llibreries en profunditat i presenta els projectes desenvolupats amb cadascuna d'elles.</p>
+            <a href="https://github.com/kilitokun69/web3d" target="_blank">Visita el GitHub d'aquest projecte</a>
+        </div>
+        <div class="flex-container" id="exercicis">
+            <div class="box">
+                <img src="images/exercici1.png" alt="Imatge1" onclick="location.href='ex1 (còpia)/ex1.html'">
+                <div>
+                    <h3>Una aproximació a les llibreries 3D</h3>
+                    <p>Un petit exercici amb A-frame per testejar l'apliació en diversos dispositius: en pantalla d'ordinador, en format mòbil i a unes ulleres de Realitat Virtual</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/cuming.png" alt="Imatge 2" onclick="location.href='ex2 (còpia)/ex2.html'">
+                <div>
+                    <h3>Construcció en 3D</h3>
+                    <p>Un projecte de construcció en 3D amb A-Frame, que permet veure models en diferents angles i perspectives.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/cuming.png" alt="Imatge 3" onclick="location.href='ex3 (còpia)/ex3.html'">
+                <div>
+                    <h3>Exploració d'espais immersius</h3>
+                    <p>Experimenta amb un espai immersiu en realitat augmentada mitjançant MindAR.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about" id="sobre-mi">
+            <h2>Kilian de los Santos</h2>
+            <img src="images/perfil.png" alt="Foto de perfil">
+            <p>Estudiant de SMIX del cicle formatiu de Grau Mitjà en Sistemes Microinformàtics i Xarxes.</p>
+            <p>M'apassiona la tecnologia i la informàtica, especialment tot el que té a veure amb la configuració,
+               el manteniment i la seguretat dels sistemes informàtics.
+            </p>
+            <p>Durant la meva formació, he adquirit coneixements en hardware, xarxes, sistemes operatius i administració de servidors.
+               M'agrada treballar en equip i solucionar problemes tècnics de manera eficient.
+               Estic motivat per continuar aprenent i aplicar els meus coneixements en un entorn professional.
+            </p>
+            <button onclick="window.location.href='Currículum Marketing Manager foto Sobrio Azul_20240221_170405_0000.pdf'">Descarrega el meu CV</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 El Meu Lloc Web</p>
+    </footer>
 </body>
 </html>
