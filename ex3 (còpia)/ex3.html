@@ -1,31 +1,56 @@
-
 <!DOCTYPE html>
-<html lang="en">
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <!-- Import A-Frame -->
-          <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-          <!-- Import MindAR -->
-          <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-image-aframe.prod.js"></script>
-          <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+    <body>
+        <a-scene mindar-image="imageTargetSrc: targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+            <a-assets>
+                <img id="wally" src="wally.jpeg" />
+                <a-asset-item id="avatarModel" src="Rumba.glb"></a-asset-item>
+            </a-assets>
 
-        </head>
-      
-      
-        <body>
-          <a-scene mindar-image="imageTargetSrc:ex3 (còpia)/targets.mind ;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-              <a-assets>
-                <a-asset-item id="avatarModel" src="personatge1.glb"></a-asset-item>
-              </a-assets>
-              <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-              <a-entity mindar-image-target="targetIndex: 0">
+            <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+            <a-entity mindar-image-target="targetIndex: 0">
+                <a-plane src="#wally" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>              
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 1">
                 <a-gltf-model src="#avatarModel"
-                scale="0.005 0.005 0.005"
-                position="0 0 0"
-                rotation="90 0 0"
-                animation-mixer ="clip: mixamo" >
-            </a-gltf-model>               
-              </a-entity>
-          </a-scene>
-        </body>
-      </html>
+                    scale="0.005 0.005 0.005"
+                    position="0 0 0"
+                    rotation="90 0 0"
+                    animation-mixer ="clip: mixamo.com">
+                </a-gltf-model>              
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 2">
+                <a-gltf-model src="#avatarModel"
+                    scale="0.005 0.005 0.005"
+                    position="0 0 0"
+                    rotation="90 0 0"
+                    animation-mixer ="clip: mixamo.com">
+                </a-gltf-model>              
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 3">
+                <a-gltf-model src="#avatarModel"
+                    scale="0.005 0.005 0.005"
+                    position="0 0 0"
+                    rotation="90 0 0"
+                    animation-mixer ="clip: mixamo.com">
+                </a-gltf-model>              
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 4">
+                <a-gltf-model src="#avatarModel"
+                    scale="0.005 0.005 0.005"
+                    position="0 0 0"
+                    rotation="90 0 0"
+                    animation-mixer ="clip: mixamo.com">
+                </a-gltf-model>              
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
+    
