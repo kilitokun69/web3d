@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ghostface
+* source:	https://sketchfab.com/3d-models/ghostface-6082221feed74f658fd514204a2df84e
+* author:	Goregamer7364 (https://sketchfab.com/Goregamer7364)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ghostface" (https://sketchfab.com/3d-models/ghostface-6082221feed74f658fd514204a2df84e) by Goregamer7364 (https://sketchfab.com/Goregamer7364) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

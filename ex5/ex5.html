@@ -1,0 +1,54 @@
+<html>
+  <head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+  <a-scene cursor="rayOrigin: mouse">
+        <a-assets>
+          <img id="fons" src="fons1.jpg" />
+          <img id="texturaterra" src="texturaterra.jpg" />
+          <img id="guernica" src="guernica.jpg" />        
+          <img id="cara" src="6.jpg" />            
+          <img id="bicicletes" src="7.jpg" />  
+          <img id="diamants" src="diaman.jpg" />    
+        </a-assets>
+
+        <a-sky src="#fons"></a-sky>
+
+        <a-plane position="0 -1 0" rotation="-90 0 0" width="1000" height="1000" src="#texturaterra"></a-plane>
+        <a-plane id="cuadro" position="-1 4 -8" rotation="0 0 0" width="8" height="2.5"  src="#guernica"></a-plane>
+        <a-box id="cubo" position="-4 3 0" rotation="0 0 50"  src="#cara" depth="1" height="1" width="1"></a-box>
+        <a-dodecahedron position="8 2 -6" rotation="0 30 0" radius="3" src="#bicicletes"></a-dodecahedron>
+        <a-box position="4 3 4" rotation="0 0 50"  src="#diamants" 
+        depth="2" height="2" width="2" 
+        animation="property: rotation; to: 0 360 0; dur: 4000; loop: true"
+         ></a-box>
+
+    
+        <a-cylinder id="movingLog" position="0 1 -6" rotation="90 0 0" radius="0.3" height="2" color="sienna"
+          animation="property: position; to: 0 1 -3; dur: 100; dir: alternate; easing: linear; loop: true"></a-cylinder>
+        
+        <a-torus position="0 1 -3" radius="0.7" radius-tubular="0.15" color="gold"></a-torus>
+      </a-scene>
+      <script>
+        let unobjecte = document.querySelector("#cubo");
+        let unobjecte2 = document.querySelector("#cuadro");
+        unobjecte.addEventListener("click", () => {            
+          unobjecte.setAttribute("animation", {
+            property: "position",
+            to: "-5 45 0",
+            dur: 1000
+          });
+        });
+        unobjecte2.addEventListener("click", () => {            
+          unobjecte2.setAttribute("animation", {
+            property: "position",
+            to: "22 0 0",
+            dur: 1000
+          });
+        });
+      </script>
+
+  </body>
+</html>
+
