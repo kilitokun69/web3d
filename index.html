@@ -11,7 +11,21 @@
             padding: 0;
             color: #333;
             background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
         }
+
+        .main-container {
+            width: 100%;
+            max-width: 1200px; /* Puedes ajustar este valor según el tamaño deseado */
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
         header {
             background: #000;
             color: #fff;
@@ -23,6 +37,7 @@
             display: flex;
             align-items: center;
             padding-right: 30px;
+            z-index: 1000;
         }
 
         header nav a {
@@ -30,9 +45,6 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
-        }
-        .container {
-            text-align: center;
         }
 
         .main-image {
@@ -59,12 +71,15 @@
         .info a:hover {
             text-decoration: underline;
         }
+
         .flex-container {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             padding: 20px;
+            gap: 20px;
         }
+
         .box {
             display: flex;
             flex-direction: column;
@@ -77,11 +92,13 @@
             border: 2px solid #ccc;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
         }
+
         .box img {
             width: 90%;
             height: auto;
             cursor: pointer;
         }
+
         .about {
             padding: 20px;
             text-align: center;
@@ -112,6 +129,7 @@
             cursor: pointer;
             border-radius: 5px;
         }
+
         .about button:hover {
             background-color: #333;
         }
@@ -135,15 +153,17 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#introduccio">Introducció</a>
-            <a href="#exercicis">Exercicis</a>
-            <a href="#sobre-mi">Sobre Mi</a>
-        </nav>
-    </header>
-    <div class="container">
+    <div class="main-container">
+        <header>
+            <nav>
+                <a href="#introduccio">Introducció</a>
+                <a href="#exercicis">Exercicis</a>
+                <a href="#sobre-mi">Sobre Mi</a>
+            </nav>
+        </header>
+
         <img src="images/bob.png" alt="Imatge Principal" class="main-image">
+
         <div class="info" id="introduccio">
             <h2>PORTAFOLIS LLIBRERIES 3D</h2>
             <p>Les llibreries 3D en JavaScript han revolucionat la creació d'entorns virtuals i experiències immersives a la web.
@@ -157,28 +177,29 @@
             <p>Aquest portafolis explora aquestes llibreries en profunditat i presenta els projectes desenvolupats amb cadascuna d'elles.</p>
             <a href="https://github.com/kilitokun69/web3d" target="_blank">Visita el GitHub d'aquest projecte</a>
         </div>
+
         <div class="flex-container" id="exercicis">
             <div class="box">
                 <img src="images/exercici1.png" alt="Imatge 1" onclick="location.href='ex1 (còpia)/ex1.html'">
                 <div>
-                    <h3>Una aproximació a les llibreries 3D</h3>
+                    <h3>eL PLANETA</h3>
                     <p>Un petit exercici amb A-frame per testejar l'apliació en diversos dispositius: en pantalla d'ordinador, en format mòbil i a unes ulleres de Realitat Virtual</p>
                 </div>
             </div>
 
             <div class="box">
-                <img src="images/cuming.png" alt="Imatge 2" onclick="location.href='ex2 (còpia)/ex2.html'">
+                <img src="ex2 (còpia)/casa.png" alt="Imatge 2" onclick="location.href='ex2 (còpia)/ex2.html'">
                 <div>
-                    <h3>Construcció en 3D</h3>
-                    <p>Un projecte de construcció en 3D amb A-Frame, que permet veure models en diferents angles i perspectives.</p>
+                    <h3>sUSTO CASA</h3>
+                    <p>Es una casa que si cliquem et fa un susto</p>
                 </div>
             </div>
 
             <div class="box">
-                <img src="images/cuming.png" alt="Imatge 3" onclick="location.href='ex3 (còpia)/ex3.html'">
+                <img src="ex3 (còpia)/whereiswally4BN.png" alt="Imatge 3" onclick="location.href='ex3 (còpia)/ex3.html'">
                 <div>
-                    <h3>Exploració d'espais immersius</h3>
-                    <p>Experimenta amb un espai immersiu en realitat augmentada mitjançant MindAR.</p>
+                    <h3>eL WALY ONDE ESTA</h3>
+                    <p>Es un escaneig de una foto y busquem a wally</p>
                 </div>
             </div>
         
@@ -187,33 +208,47 @@
                 <img src="images/exercici1.png" alt="Imatge 1" onclick="location.href='ex1 (còpia)/ex1.html'">
                 <div>
                     <h3>Una aproximació a les llibreries 3D</h3>
-                    <p>Un petit exercici amb A-frame per testejar l'apliació en diversos dispositius: en pantalla d'ordinador, en format mòbil i a unes ulleres de Realitat Virtual</p>
+                    <p>s ulleres de Realitat Virtual</p>
                 </div>
             </div>
 
             <div class="box">
-                <img src="images/cuming.png" alt="Imatge 2" onclick="location.href='ex5/ex5.html'">
+                <img src="ex5/fons1.jpg" alt="Imatge 2" onclick="location.href='ex5/ex5.html'">
                 <div>
-                    <h3>Construcció en 3D</h3>
+                    <h3>cUBISME</h3>
                     <p>Un projecte de construcció en 3D amb A-Frame, que permet veure models en diferents angles i perspectives.</p>
                 </div>
             </div>
 
             <div class="box">
-                <img src="images/cuming.png" alt="Imatge 3" onclick="location.href='ex6/ex6.html'">
+                <img src="ex6/assets/casadelsusto.jpg" alt="Imatge 3" onclick="location.href='ex6/ex6.html'">
                 <div>
-                    <h3>Exploració d'espais immersius</h3>
+                    <h3>CASA DE SUSTOS</h3>
                     <p>Experimenta amb un espai immersiu en realitat augmentada mitjançant MindAR.</p>
                 </div>
             </div>
             <div class="box">
-                <img src="images/cuming.png" alt="Imatge 3" onclick="location.href='ex8/ex8.html'">
+                <img src="ex8/imatges/imatge0.jpg" alt="Imatge 3" onclick="location.href='ex8/ex8.html'">
                 <div>
-                    <h3>Exploració d'espais immersius</h3>
+                    <h3>iNTERACTIU</h3>
                     <p>Experimenta amb un espai immersiu en realitat augmentada mitjançant MindAR.</p>
-                </div>
+                </div>                
+            </div>
+            <div class="box">
+                <img src="ex9/fons.png" alt="Imatge 3" onclick="location.href='ex9/ex9.html'">
+                <div>
+                    <h3>DISPAROS</h3>
+                    <p>un joc on disparem a personatges</p>
+                </div>   
+            <div class="box">
+                    <img src="ex9/fons.png" alt="Imatge 3" onclick="location.href='ex9/ex9.html'">
+                    <div>
+                        <h3>DISPAROS</h3>
+                        <p>un joc on disparem a personatges</p>
+                    </div>         
             </div>
         </div>
+
         <div class="about" id="sobre-mi">
             <h2>Kilian de los Santos</h2>
             <img src="images/perfil.png" alt="Foto de perfil">
@@ -226,10 +261,10 @@
             <button onclick="window.location.href='Currículum Marketing Manager foto Sobrio Azul_20240221_170405_0000.pdf'">Descarrega el meu CV</button>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2025 El Meu Lloc Web</p>
     </footer>
 </body>
 </html>
-
 
